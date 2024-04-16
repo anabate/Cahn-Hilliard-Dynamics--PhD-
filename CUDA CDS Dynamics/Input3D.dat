@@ -1,0 +1,48 @@
+256 !Nx - Multiple 16
+256 !Ny - Multiple 16
+1   !Nummber of hz
+10   !hz: thickness
+0   !HOLD:  0:multilayers// 1:bilayer:bottom fixed// 2: bilayer different k
+10  !hzA_b: thickness BOTTOM//bilayer: half thickness
+10  !hzA_t: thickness TOP
+30   !Number of Files
+0.21  !tau Pol_BOTTOM .24
+0.21  !tauClean
+0.21  !tauP Pol_TOP .19 ..215
+1.5   !a
+0.47  !f  Pol_BOTTOM
+0.47  !fP Pol_TOP
+2.3   !v
+0.38  !u
+0.4   !D  Pol_BOTTOM 
+0.4   !DP Pol_TOP
+0.0   !Dx 
+0.0   !Dy 
+0.02  !B  Pol_BOTTOM
+0.02  !BP Pol_TOP
+0.1   !etaI (initial configuration)
+0.0  !etaR (simulación. With 0.0 noise in off)
+-20   !seed
+10000   !Nsteps
+6000  !NstepsClean
+1     !DT
+2.0   !Wd
+8.0   !Rmax
+2.0   !Rmin 
+1    !Ampl 
+1     !Npot: 1 is on 0 is off
+0     !Vini: 0: Rand file / xx: continue file xx
+0     !Method: 0:Rand // 1:file // 2:file+Rand // 3:file+file(+Rand)
+plt   !Initial file: dat/plt
+0     !1 Save phi. dat
+1     !1 Save phi. plt
+0     !1 Save E .dat and .plt
+16    !Nthreads: number of threads
+RandM        !Name of RandMatrix
+PLT/1capa  !Name of phi .plt
+DAT/1capa     !Name of phi .dat
+ENERGY/1capa      !Name of E .dat and .plt
+ENERGY/1capaall   !Name of file  (<phi2>1/2 and <E>) vs t
+ENERGY/1capa_kp   !Name of file  (<phi2>1/2 and <E>) vs layers
+PLT/DX5_z=6_        !File BOTTOM
+PLT/MONO_z=6_       !File TOP (Method: 3)
